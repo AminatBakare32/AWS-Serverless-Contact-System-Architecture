@@ -1,44 +1,26 @@
-# 🏗️ AWS Serverless Contact Form System
+#  AWS Serverless Contact Form System
 
 A **production-grade serverless architecture** built for a business contact form using **AWS Lambda, SNS, SES, CloudFront, and WAF**.  
 This project demonstrates end-to-end **cloud solution design, deployment, and automation** using **Terraform** and AWS managed services.
 
 ---
 
-## 📘 Overview
+##  Overview
 
-This system enables secure, scalable, and cost-efficient processing of contact form submissions for an e-commerce website — without managing any servers.
+This system enables the secure, scalable, and cost-efficient processing of contact form submissions for an e-commerce website, eliminating the need to manage servers.
 
 Users submit messages through a static frontend hosted on **S3 + CloudFront**, which securely routes data through **AWS WAF** and **Lambda**, triggering **SNS and SES** notifications to deliver messages to the business inbox.
 
 ---
 
-## ⚙️ Architecture Diagram
+##  Architecture Diagram
+<img width="1253" height="711" alt="Screenshot 2025-11-09 021029" src="https://github.com/user-attachments/assets/2c304463-4e47-4142-b619-df0fd536e0af" />
 
-![AWS Serverless Architecture](AWS ARCH - INVESTINTECOMM.png)
 
-👤 User Request
-↓
-🌐 CloudFront (CDN + HTTPS)
-↓
-📋 Contact Form (Static site)
-↓
-🛡️ AWS WAF (Security layer)
-↓
-⚡ Lambda Function (Form processor)
-↓
-📨 Amazon SNS (Message broker)
-↓
-📧 Amazon SES (Email notifications)
-↓
-📊 CloudWatch (Logs & monitoring)
-
-yaml
-Copy code
 
 ---
 
-## 🧩 Key AWS Components
+##  Key AWS Components
 
 | Service | Description |
 |----------|--------------|
@@ -51,7 +33,7 @@ Copy code
 
 ---
 
-## 🛠️ Technical Highlights
+##  Technical Highlights
 
 - **Infrastructure as Code:** All resources provisioned using Terraform  
 - **Security:** IAM least-privilege roles and WAF protection  
@@ -62,7 +44,7 @@ Copy code
 
 ---
 
-## 📊 Results
+##  Results
 
 ✅ Deployed **15+ AWS resources** with zero manual configuration  
 ✅ Achieved **end-to-end automation** from user input to business inbox  
@@ -71,7 +53,7 @@ Copy code
 
 ---
 
-## 🧠 Skills Demonstrated
+##  Skills Demonstrated
 
 - **AWS Services:** Lambda, SNS, SES, WAF, CloudFront, CloudWatch, IAM  
 - **IaC (Terraform):** Resource dependencies, roles, outputs, and modules  
@@ -81,7 +63,7 @@ Copy code
 
 ---
 
-## 🚀 Future Enhancements
+##  Future Enhancements
  
 - Integrate **DynamoDB** for lead tracking  
 - Add **Cognito authentication** for admin access  
@@ -91,10 +73,12 @@ Copy code
 
 ## PROJECT STRUCTURE
 
-  terraform-aws-contact-form/
-├── main.tf                 # Primary infrastructure
-├── variables.tf            # Configuration variables
-├── outputs.tf              # Terraform outputs
+Terraform-AWS-contact-form/
+
+├── main.tf # Primary infrastructure
+├── variables.tf # Configuration variables
+├── outputs.tf # Terraform outputs
+├── terraform.tfvars # Environment variables
 ├── lambda/
-│   └── index.js           # Contact form processor
-└── README.md              # This file
+│ └── index.js # Contact form processor
+└── README.md # This file
